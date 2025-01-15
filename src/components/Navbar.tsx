@@ -1,4 +1,5 @@
-"use client";
+"use client"
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { ShoppingCart, Heart, Search, User, Menu, X } from 'lucide-react';
 
@@ -20,10 +21,10 @@ const NavBar = () => {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-gray-800 hover:text-blue-600 font-medium">Home</a>
-            <a href="/shop" className="text-gray-800 hover:text-blue-600 font-medium">Shop</a>
-            <a href="/about" className="text-gray-800 hover:text-blue-600 font-medium">About</a>
-            <a href="/contact" className="text-gray-800 hover:text-blue-600 font-medium">Contact</a>
+            <Link href="/" className="text-gray-800 hover:text-blue-600 font-medium">Home</Link>
+            <Link href="/shop" className="text-gray-800 hover:text-blue-600 font-medium">Shop</Link>
+            <Link href="/about" className="text-gray-800 hover:text-blue-600 font-medium">About</Link>
+            <Link href="/contact" className="text-gray-800 hover:text-blue-600 font-medium">Contact</Link>
           </div>
 
           {/* Icons */}
