@@ -51,18 +51,18 @@ const NavBar = () => {
         {/* Mobile menu */}
         <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <a href="/" className="block px-3 py-2 text-gray-800 hover:text-blue-600 font-medium">
+            <Link href="/" className="block px-3 py-2 text-gray-800 hover:text-blue-600 font-medium">
               Home
-            </a>
-            <a href="/shop" className="block px-3 py-2 text-gray-800 hover:text-blue-600 font-medium">
+            </Link>
+            <Link href="/shop" className="block px-3 py-2 text-gray-800 hover:text-blue-600 font-medium">
               Shop
-            </a>
-            <a href="/about" className="block px-3 py-2 text-gray-800 hover:text-blue-600 font-medium">
+            </Link>
+            <Link href="/about" className="block px-3 py-2 text-gray-800 hover:text-blue-600 font-medium">
               About
-            </a>
-            <a href="/contact" className="block px-3 py-2 text-gray-800 hover:text-blue-600 font-medium">
+            </Link>
+            <Link href="/contact" className="block px-3 py-2 text-gray-800 hover:text-blue-600 font-medium">
               Contact
-            </a>
+            </Link>
             <div className="flex items-center space-x-4 px-3 py-2">
               <Search className="h-6 w-6 cursor-pointer" />
               <Heart className="h-6 w-6 cursor-pointer" />
