@@ -37,14 +37,16 @@ export default async function Home() {
         </div>
       </div>
 
-      <h1 className="text-3xl font-bold mb-4">Products</h1>
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {products.map((product: any) => (
           <div className="border rounded-lg p-4 shadow-lg transition-transform transform hover:scale-105" key={product._id}>
-            <img
+            <Image
               className="w-full h-80 object-cover mb-2" // Increased height
               src={product.imagePath}
               alt={product.name}
+              width={200}
+              height={200}
             />
             <h2 className="text-xl font-semibold">{product.name}</h2>
             <p className="text-gray-700">{product.description}</p>

@@ -1,10 +1,13 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["plus.unsplash.com"], // Add the allowed image domain here
+    domains: [
+      'next-ecommerce-template-4.vercel.app',
+      'plus.unsplash.com',
+      'images.unsplash.com',
+    ],
   },
-  /* other config options here */
 };
 
 export default nextConfig;
