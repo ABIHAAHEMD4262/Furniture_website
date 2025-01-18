@@ -2,11 +2,23 @@ import { client } from "@/sanity/lib/client";
 import Image from "next/image";
 
 // Define an async function to fetch and filter products from Sanity
-async function fetchProducts() {
+interface Product {
+  _id: string;
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  category: string;
+  stockLevel: number;
+  isFeaturedProduct: boolean;
+  imagePath: string;
+}
+
+async function fetchProducts(): Promise<Product[]> {
   const allProducts = await client.fetch(`*[_type == 'product']`);
 
   // Filter products with IDs between 1 and 21
-  const filteredProducts = allProducts.filter((product: any) => {
+  const filteredProducts = allProducts.filter((product: Product) => {
     const id = parseInt(product.id, 10); // Convert string ID to number
     return id >= 1 && id <= 21;
   });
@@ -18,9 +30,8 @@ export default async function Home() {
   const products = await fetchProducts();
 
   return (
-    
     <div className="container mx-auto p-4">
-        {/* Hero Section */}
+      {/* Hero Section */}
       <div className="relative w-full h-[316px] bg-cover bg-center bg-[url('/images/shop.png')]">
         <div className="flex flex-col items-center justify-center h-full text-center">
           <Image
@@ -37,9 +48,8 @@ export default async function Home() {
         </div>
       </div>
 
-    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {products.map((product: any) => (
+        {products.map((product: Product) => (
           <div className="border rounded-lg p-4 shadow-lg transition-transform transform hover:scale-105" key={product._id}>
             <Image
               className="w-full h-80 object-cover mb-2" // Increased height
