@@ -21,18 +21,18 @@ const NavBar = () => {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-800 hover:text-blue-600 font-medium">Home</Link>
-            <Link href="/shop" className="text-gray-800 hover:text-blue-600 font-medium">Shop</Link>
-            <Link href="/about" className="text-gray-800 hover:text-blue-600 font-medium">About</Link>
-            <Link href="/contact" className="text-gray-800 hover:text-blue-600 font-medium">Contact</Link>
+            <Link href="/" className="text-black hover:scale-105 hover:font-semibold transition-transform duration-300 text-xl">Home</Link>
+            <Link href="/shop" className="text-black hover:scale-105 hover:font-semibold transition-transform duration-300 text-xl">Shop</Link>
+            <Link href="/about" className="text-black hover:scale-105 hover:font-semibold transition-transform duration-300 text-xl">About</Link>
+            <Link href="/contact" className="text-black hover:scale-105 hover:font-semibold transition-transform duration-300 text-xl">Contact</Link>
           </div>
 
           {/* Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Search className="h-6 w-6 cursor-pointer hover:text-blue-600" />
-            <Heart className="h-6 w-6 cursor-pointer hover:text-blue-600" />
-            <ShoppingCart className="h-6 w-6 cursor-pointer hover:text-blue-600" />
-            <User className="h-6 w-6 cursor-pointer hover:text-blue-600" />
+            <Search className="h-6 w-6 cursor-pointer  hover:scale-105  transition-transform duration-300" />
+            <Heart className="h-6 w-6 cursor-pointer  hover:scale-105  transition-transform duration-300" />
+            <ShoppingCart className="h-6 w-6 cursor-pointer  hover:scale-105  transition-transform duration-300" />
+            <User className="h-6 w-6 cursor-pointer  hover:scale-105  transition-transform duration-300" />
           </div>
 
           {/* Mobile menu button */}
