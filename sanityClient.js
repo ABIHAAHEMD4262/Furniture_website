@@ -1,12 +1,12 @@
-import { createClient } from '@sanity/client';
+import { createClient } from 'next-sanity'
+
+import { apiVersion, dataset, projectId } from '../env'
+
+export const client = createClient({
+  projectId,
+  dataset,
+  apiVersion,
+  useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
+})
 
 
-const client = createClient({
-  projectId: '4hrkqh93', // Replace with your Sanity project ID
-  dataset: 'production', // Replace with your dataset name
-  useCdn: false,
-  token: '', // Replace with your Sanity API token
-});
-
-
-export default client;
